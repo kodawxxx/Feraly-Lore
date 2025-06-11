@@ -1,1 +1,200 @@
-# Feraly-Lore
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feraly : Fracture Noire</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at top, #0f0f0f, #050505);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+    header {
+      background: rgba(5, 5, 5, 0.85);
+      backdrop-filter: blur(10px);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #8f00ff;
+    }
+    .logo {
+      font-size: 34px;
+      font-weight: bold;
+      color: #8f00ff;
+      text-shadow: 0 0 10px #8f00ff;
+    }
+    nav a {
+      color: #dcdcdc;
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+    nav a:hover {
+      color: #8f00ff;
+    }
+    .btn-telecharger {
+      background-color: #8f00ff;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin-left: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn-telecharger:hover {
+      background-color: #b133ff;
+    }
+    .container, .characters, .chroniques {
+      max-width: 1000px;
+      margin: auto;
+      padding: 80px 20px;
+      display: none;
+      animation: fadeIn 1s ease-in;
+    }
+    .visible {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1, h2 {
+      color: #fff;
+      margin-bottom: 20px;
+      text-shadow: 0 0 12px #8f00ff;
+    }
+    p {
+      color: #d4d4d4;
+      margin-bottom: 20px;
+      font-size: 17px;
+    }
+    .hero-image {
+      text-align: center;
+      margin: 60px 0;
+      animation: zoomIn 1.5s ease-in-out;
+    }
+    .hero-image img {
+      width: 100%;
+      max-width: 850px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(143, 0, 255, 0.4);
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .character-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .character-card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 0 12px rgba(143, 0, 255, 0.2);
+    }
+    .character-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(143, 0, 255, 0.4);
+    }
+    .character-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .character-card h3 {
+      color: #8f00ff;
+      margin-bottom: 10px;
+    }
+    footer {
+      background-color: #0a0a0a;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #8f00ff;
+      margin-top: 60px;
+    }
+  </style>
+  <script>
+    function showSection(sectionClass) {
+      document.querySelector('.container').classList.remove('visible');
+      document.querySelector('.characters').classList.remove('visible');
+      document.querySelector('.chroniques').classList.remove('visible');
+      document.querySelector(sectionClass).classList.add('visible');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">Feraly</div>
+    <nav>
+      <a onclick="showSection('.chroniques')">Chroniques</a>
+      <a onclick="showSection('.characters')">Personnages</a>
+      <a class="btn-telecharger" href="fracture_noire.pdf" download>Télécharger</a>
+    </nav>
+  </header>
+
+  <div class="chroniques visible container">
+    <h1>Chapitre 2 : Fracture Noire</h1>
+    <p>Après l'effondrement du Nexus, l'île a été coupée du multivers. Une anomalie, nommée "Zéro Obscur", a consumé les anciennes réalités et donné naissance à une nouvelle ère dominée par des portails instables et des zones chaotiques.</p>
+    <p>Deux coalitions sont nées : <strong>Les Veilleurs du Néant</strong>, des entités cybernétiques issues d’un futur fracturé, et <strong>Le Réseau Céleste</strong>, une alliance de résistants porteurs de lumière. Entre infiltration de portails, hacking d’artefacts et survie dans des territoires désintégrés, chaque joueur devient l’acteur d’une guerre cosmique hors du temps.</p>
+    <div class="hero-image">
+      <img src="https://cdn.wallpapersafari.com/65/27/i3mpIF.jpg" alt="Agents du Néant vs Réseau Céleste">
+    </div>
+    <h2>L’Éveil du Cœur Obscur</h2>
+    <p>Un ancien noyau énergétique, prisonnier sous l'île, est réactivé par une intelligence artificielle rebelle : LUX-IX. Elle fusionne les souvenirs du passé avec des fragments de dimensions perdues, déclenchant une apocalypse lumineuse. Les cieux se déchirent. L’eau se transforme en miroir du vide. La réalité s’effondre lentement...</p>
+    <h2>Saison 3 : Vortex et Résistance</h2>
+    <p>L'île, désormais fracturée en zones flottantes, est envahie par des vortex gravitationnels. Les joueurs se battent en apesanteur, utilisent des technologies ancestrales, et explorent des sanctuaires cachés dans des bulles temporelles. Des êtres trans-dimensionnels apparaissent, apportant des pouvoirs uniques... mais à quel prix ?</p>
+    <h2>Le futur t’appelle...</h2>
+    <p>Prends le contrôle du Nexus fracturé. Scanne les failles. Libère LUX-IX... ou détruis-la. Forge ta propre légende dans l’univers cyber-fantastique de <strong>Fracture Noire</strong>.</p>
+  </div>
+
+  <div class="characters container">
+    <h2>Agents Légendaires</h2>
+    <div class="character-grid">
+      <div class="character-card">
+        <img src="https://cdn2.unrealengine.com/fortnite-character-01-variant-1-1040x1068-430b634d2af6.png" alt="Midas">
+        <h3>MIDAS</h3>
+        <p>Génie manipulateur, il transforme tout ce qu’il touche en or et contrôle le flux de la réalité à travers ses plans secrets.</p>
+      </div>
+      <div class="character-card">
+        <img src="https://fortnitefun.ru/wp-content/uploads/2021/10/summerskye-img.png" alt="Skye">
+        <h3>SKYE</h3>
+        <p>Aventurière lumineuse, Skye manie la technologie ancestrale et guide les failles à travers son compagnon ailé.</p>
+      </div>
+      <div class="character-card">
+        <img src="https://tryhardguides.com/wp-content/uploads/2022/09/paradigm-reality-659-icon.png" alt="Paradigme">
+        <h3>PARADIGME</h3>
+        <p>Maîtresse du Mecha, elle revient du vide pour contrer les anomalies et restaurer l’équilibre instable de l’île.</p>
+      </div>
+      <div class="character-card">
+        <img src="https://gamepedia.cursecdn.com/fortnite_gamepedia/d/d1/New_Visitor.png" alt="Le Visiteur">
+        <h3>LE VISITEUR</h3>
+        <p>Premier voyageur interdimensionnel, il observe les réalités s’effondrer et murmure les vérités oubliées des origines.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Feraly Lore : Fracture Noire. Tous droits réservés.
+  </footer>
+</body>
+</html>
